@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!--padrão de codificação de caracteres-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--meta informações para o IE Edge-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--definição de escala dos elementos de tela.-->
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style/style.css"> <!--O link serve para ligar o arqvuio CSS com o HTML-->
+</head>
+<body>
+    
+    <header class="cabecalho"> <!--cabeçalho da página, o que vai acima dela-->
+    <!--No caso do HEader, normalmente teremos os menus, por isso, usamos o NAV-->
+        <nav class="cabecalho_menu">
+            <a class="cabecalho_menu_links" href="index.html">
+                Home
+            </a>
+            <a class="cabecalho_menu_links" href="about.html">
+                Sobre mim
+            </a>
+
+            <a class="cabecalho_menu_links" href="projects.html">
+                Projetos
+            </a>
+
+        </nav>
+    
+    </header>
+
+    <main class="apresentacao"> <!--texto principal da página. a classe "apresentacao, será onde eu escolherei a forma de apresentar os dados."-->
+        
+        <section class="apresentacao_conteudo">
+            <h1 class="apresentacao_conteudo_titulo">Eleve seu negócio digital a outro nível <strong class="tituloDestaque">um Front-end de qualidade!</strong> </h1>
+            <!--o strong serve para enfatizar alguma informação relevante da página-->
+
+            <p class="apresentacao_conteudo_texto">
+                Olá! Sou Joana Santos, desenvolvedora Front-end com especialidade em <span>React,
+                    HTML e CSS</span> . Ajudo pequenos negócios e designers a colocarem em prática boas ideias. <div class="apresentacao_conteudo_texto_hover">Vamos conversar?</div>
+            </p>
+
+            <div class="apresentacao_links">
+                <!--a de "anchor" define trecho que será redirecionável, para algum outro site por exemplo-->
+                <!--button faz parte da linguagem mas só é usada em caso de botões de interface dentro dá pagina, como formulários-->
+                <h2 class="apresentacao_links_subtitulo">Acesse as minhas redes!</h2>
+                <a class="apresentacao_links_navegacao" href="https://github.com">
+                    <img src="./assets/github.png" alt="Imagem do logo do Github">
+                    Github
+                </a> 
+                <a class="apresentacao_links_navegacao" href="https://linkedin.com">
+                    <img src="./assets/linkedin.png" alt="Imagem do logo do Linkedin">
+                    Linkedin
+                </a> 
+                <a class="apresentacao_links_navegacao href="https://twitch.tv">
+                    <img src="./assets/twitch.png" alt="Imagem do logo da Twitch">
+                    Twitch
+                </a>              
+            </div>
+
+        </section>
+        
+        <img class= "apresentacao_imagem" src="./assets/Imagem.png" alt="Imagem da Joana Santos programando.">
+    </main>
+
+    <!--O footer corresponde ao Rodapé da página, podendo ser usado as mesmas TAG's do HTML-->
+    <footer class="rodape">
+        <p>Desenvolido por Alura</p>
+    </footer>
+</body>
+</html>
