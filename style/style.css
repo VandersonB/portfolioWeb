@@ -1,0 +1,168 @@
+
+/*quando queremos importar elementos para o nosso stilo, usamos o código abaixo (no caso, estamos importando 2 fontes*/
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+*{
+    /* esse código representa um RESET, conhecido como "reset css" a proposta é eliminar pré-formatação das páginas,
+    garantindo um maior controle da estilização.*/
+    margin:0;
+    padding: 0;
+}
+
+/* A estilização no CSS pode ser feita pelo controle de TAGs, como o caso abaixo, ou por classes.
+
+No caso de classes, ela precisa ser enunciada no html e chamada aqui a partir do ".nome-da-classe" */
+
+:root{
+    --cor-principal: black;
+    --cor-secundaria:#F6F6F6;
+    --cor-terciaria: #22D4FD;
+}
+
+body{
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 10%;
+    
+}
+
+.cabecalho_menu{
+    display: flex;
+    gap: 16px;
+}
+
+.cabecalho_menu_links{
+    font-family:'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    /* a unidade rem é "relative element" e acompanha o tamanho da página que esta sendo utilizada. 
+    Existem outras medidas de tamanho relativo. Ver no W3Schools    */
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.tituloDestaque {
+    color: var(--cor-terciaria);
+}
+
+span{
+    font-weight: bold;
+    color: rebeccapurple;
+}
+
+.apresentacao{
+    padding: 8% 10%;
+    display: flex; /*determina de que forma os elementos desta classe serão distribuidos, no caso com o uso de Flexbox*/
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    /*Consultar documentação e o site https://css-tricks.com/snippets/css/a-guide-to-flexbox/ para maiores explicações*/
+}
+
+.apresentacao_conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;   /**/
+    gap: 40px;
+}
+
+.apresentacao_conteudo_titulo {
+    font-family:'Krona One', sans-serif;
+    font-size: 2.25rem;
+}
+
+.apresentacao_conteudo_texto {
+    font-family:'Montserrat', sans-serif;
+    font-size: 1.5rem;
+
+}
+
+.apresentacao_imagem{
+    width: 50%;     
+}
+
+/*a ideia das duas classes abaixo é configurar os botões de acesso ao instagram e github*/
+
+.apresentacao_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.apresentacao_links_subtitulo{
+   font-size: 1.5rem;
+   font-family: 'Krona One', sans-serif;
+   font-weight: 400;
+
+}
+
+.apresentacao_links_navegacao { 
+    /* background-color: #22D4FD; */
+    width: 50%;
+    border:  2px solid var(--cor-terciaria);
+    padding: 21.5px 0; /*espaçamento entre o texto e a "caixa".*/
+    text-align: center;
+    text-decoration: none; /*remove a formatação padrão de links.*/
+    border-radius: 8px; /*coloca um raio na borda*/
+    font-family:'Montserrat', sans-serif;
+    font-weight: 600; /*altera o pesoda fonte, desde que ela tenha sido importada*/
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    display: flex; /*aqui eu estou usando flex nos filhos da tag a, logo, a imagem e o texto da rede social.*/
+    justify-content: center;
+    gap: 16px;
+}
+
+.rodape{
+    background:var(--cor-terciaria);
+    color:var(--cor-principal);
+    padding: 24px;
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400; 
+    font-size: 1.5rem;
+}
+
+
+/*O código abaixo utiliza a função Hover, que dá um efeito nos botões quando passamos o mouse por cima*/
+
+.apresentacao_links_link:hover{
+    background:var(--cor-principal);
+}
+
+.apresentacao_conteudo_texto_hover{
+    font-family:'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.apresentacao_conteudo_texto_hover:hover{
+    font-size: 2.25rem;
+    color:var(--cor-terciaria);
+}
+
+/*o media é usado como uma condição da página, como se fosse um "case"
+NO caso do media, podemos mudar apenas o que nos intreressa.    
+PAra o projeto abaixo, mudamos a disposição dos items e centralizamos o cabeçalho.      
+*/
+@media (max-width:1200px){
+    .cabecalho{
+        padding: 6%;
+    }
+    .cabecalho_menu{
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao_conteudo{
+        width: auto; /*ele completa de acordo com o padding ajusado (no caso foi feito na classe pai)*/
+    }
+    
+
+}
